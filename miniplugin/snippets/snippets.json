@@ -1,0 +1,503 @@
+{
+    "miniget": {
+        "prefix": "miGet",
+        "body": [
+            "mini.get('${id}')"
+        ],
+        "description": "根据id获取控件对象"
+    },
+    "miniGetByName": {
+        "prefix": "miGetByName",
+        "body": [
+            "mini.getByName('${name}', ${parentDom})"
+        ],
+        "description": "根据name获取单个控件，parent:可选,限定获取控件的范围。"
+    },
+    "miniGetsbyName": {
+        "prefix": "miGetsByName",
+        "body": [
+            "mini.getsbyName('${name}', ${parentDom})"
+        ],
+        "description": "根据name获取多个控件，parent:可选,限定获取控件的范围。"
+    },
+    "miniParse": {
+        "prefix": "miParse",
+        "body": [
+            "mini.parse(${el})"
+        ],
+        "description": "将html标签解析为miniui控件, el：可选，限定解析范围"
+    },
+    "miniAddClass": {
+        "prefix": "miAddCls",
+        "body": [
+            "mini.get('${id}').addCls('${classname}')"
+        ],
+        "description": "增加样式类"
+    },
+    "miniRemoveClass": {
+        "prefix": "miRemoveCls",
+        "body": [
+            "mini.get('${id}').removeCls('${classname}')"
+        ],
+        "description": "去除样式类"
+    },
+    "miniShow": {
+        "prefix": "miShow",
+        "body": [
+            "mini.get('${id}').show()"
+        ],
+        "description": "显示控件"
+    },
+    "miniHide": {
+        "prefix": "miHide",
+        "body": [
+            "mini.get('${id}').hide()"
+        ],
+        "description": "隐藏控件"
+    },
+    "miniEnable": {
+        "prefix": "miEnable",
+        "body": [
+            "mini.get('${id}').enable()"
+        ],
+        "description": "启用控件"
+    },
+    "miniDisable": {
+        "prefix": "miDisable",
+        "body": [
+            "mini.get('${id}').disable()"
+        ],
+        "description": "禁用控件"
+    },
+    "miniOn": {
+        "prefix": "miOn",
+        "body": [
+            "mini.get('${id}').on('${event}', function (e) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "监听事件, event: 事件类型 "
+    },
+    "miniUn": {
+        "prefix": "miUn",
+        "body": [
+            "mini.get('${id}').un('${event}', function (e) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "取消监听事件, event: 事件类型"
+    },
+    "miniSetData": {
+        "prefix": "miSetData",
+        "body": [
+            "mini.get('${id}').setData (${data} )"
+        ],
+        "description": "控件设值"
+    },
+    "miniGetData": {
+        "prefix": "miGetData",
+        "body": [
+            "mini.get('${id}').getData( ${data} )"
+        ],
+        "description": "控件取值"
+    },
+    "miniSetValue": {
+        "prefix": "miSetValue",
+        "body": [
+            "mini.get('${id}').setValue( ${value} )"
+        ],
+        "description": "控件设值"
+    },
+    "miniGetValue": {
+        "prefix": "miGetValue",
+        "body": [
+            "mini.get('${id}').getValue( ${value} )"
+        ],
+        "description": "控件取值"
+    },
+    "miniLoad": {
+        "prefix": "miLoad",
+        "body": [
+            "mini.get('${id}').load(${params}, ${successFn}, ${failFn}, ${completeFn})"
+        ],
+        "description": "加载数据，successFn：成功回调函数，failFn：失败回调函数"
+    },
+    "miniReload": {
+        "prefix": "miReload",
+        "body": [
+            "mini.get('${id}').reload(${successFn}, ${failFn}, ${completeFn})"
+        ],
+        "description": "重新加载数据，successFn：成功回调函数，failFn：失败回调函数"
+    },
+    "miniFrozenColumns": {
+        "prefix": "miFrozenColumns",
+        "body": [
+            "mini.get('${id}').frozenColumns(${startColumnIndex}, ${finishColumnIndex})"
+        ],
+        "description": "锁定列，startColumnIndex：开始列，finishColumnIndex：结束列"
+    },
+    "miniUnFrozenColumns": {
+        "prefix": "miUnFrozenColumns",
+        "body": [
+            "mini.get('${id}').unFrozenColumns()"
+        ],
+        "description": "取消锁定列"
+    },
+    "miniMergeCells": {
+        "prefix": "miMergeCells",
+        "body": [
+            "mini.get('${id}').mergeCells([{rowIndex: 0, columnIndex: 0, rowSpan: 1, colSpan: 2}])"
+        ],
+        "description": "合并单元格"
+    },
+    "miniMergeColumns": {
+        "prefix": "miMergeColumns",
+        "body": [
+            "mini.get('${id}').mergeColumns(${0:['columnName']})"
+        ],
+        "description": "自动合并相同值单元格"
+    },
+    "miniGetChanges": {
+        "prefix": "miGetChanges",
+        "body": [
+            "mini.get('${id}').getChanges('added|modified|removed', ${onlyField})"
+        ],
+        "description": "获取增加、删除、修改后的数据集合, onlyField: 为true，modified的行数据将只返回修改的字段"
+    },
+    "miniBeginEditCell": {
+        "prefix": "miBeginEditCell",
+        "body": [
+            "mini.get('${id}').beginEditCell()"
+        ],
+        "description": "对当前选中单元格启动编辑。"
+    },
+    "miniCancelEdit": {
+        "prefix": "miCancelEdit",
+        "body": [
+            "mini.get('${id}').cancelEdit()"
+        ],
+        "description": "取消所有行编辑。"
+    },
+    "miniCommitEditRow": {
+        "prefix": "miCommitEditRow",
+        "body": [
+            "mini.get('${id}').commitEditRow(${row})"
+        ],
+        "description": "提交指定行编辑。"
+    },
+    "miniCommitEdit": {
+        "prefix": "miCommitEdit",
+        "body": [
+            "mini.get('${id}').commitEdit()"
+        ],
+        "description": "提交所有行编辑。"
+    },
+    "miniBeginEditRow": {
+        "prefix": "miBeginEditRow",
+        "body": [
+            "mini.get('${id}').beginEditRow(${row})"
+        ],
+        "description": "启动行编辑。"
+    },
+    "miniCancelEditRow": {
+        "prefix": "miCancelEditRow",
+        "body": [
+            "mini.get('${id}').cancelEditRow(${row})"
+        ],
+        "description": "取消指定行编辑。"
+    },
+    "miniIsEditing": {
+        "prefix": "miIsEditing",
+        "body": [
+            "mini.get('${id}').isEditing()"
+        ],
+        "description": "是否有行编辑。"
+    },
+    "miniIsEditingRow": {
+        "prefix": "miIsEditingRow",
+        "body": [
+            "mini.get('${id}').isEditingRow(${row})"
+        ],
+        "description": "指定行是否处于编辑状态。"
+    },
+    "miniGetCellEditor": {
+        "prefix": "miGetCellEditor",
+        "body": [
+            "mini.get('${id}').getCellEditor( ${column}, ${row} )"
+        ],
+        "description": "获取指定列和行的编辑器控件对象。"
+    },
+    "miniGetEditorOwnerRow": {
+        "prefix": "miGetEditorOwnerRow",
+        "body": [
+            "mini.get('${id}').getEditorOwnerRow( ${editor} )"
+        ],
+        "description": "获取编辑器属于哪一行对象。"
+    },
+    "miniUpdateRow": {
+        "prefix": "miUpdateRow",
+        "body": [
+            "mini.get('${id}').updateRow( ${row}, ${rowData} )"
+        ],
+        "description": "更新行。"
+    },
+    "miniRemoveRow": {
+        "prefix": "miRemoveRow",
+        "body": [
+            "mini.get('${id}').removeRow( ${row}, ${autoSelect} )"
+        ],
+        "description": "删除行，autoSelect为true，则删除记录后，自动选择下一条记录。"
+    },
+    "miniRemoveRows": {
+        "prefix": "miRemoveRows",
+        "body": [
+            "mini.get('${id}').removeRows( ${rows}, ${autoSelect} )"
+        ],
+        "description": "删除多行，autoSelect为true，则删除记录后，自动选择下一条记录。"
+    },
+    "miniAddRows": {
+        "prefix": "miAddRows",
+        "body": [
+            "mini.get('${id}').addRows( ${rows}, ${index} )"
+        ],
+        "description": "增加多行。"
+    },
+    "miniAddRow": {
+        "prefix": "miAddRow",
+        "body": [
+            "mini.get('${id}').addRows( ${row}, ${index} )"
+        ],
+        "description": "增加行。"
+    },
+    "miniIsSelected": {
+        "prefix": "miIsSelected",
+        "body": [
+            "mini.get('${id}').isSelected( ${row} )"
+        ],
+        "description": "是否选中行。"
+    },
+    "miniGetSelecteds": {
+        "prefix": "miGetSelecteds",
+        "body": [
+            "mini.get('${id}').getSelecteds()"
+        ],
+        "description": "获取所有选中的行。"
+    },
+    "miniGetSelected": {
+        "prefix": "miGetSelected",
+        "body": [
+            "mini.get('${id}').getSelected()"
+        ],
+        "description": "获取当前选中行。"
+    },
+    "miniSetSelected": {
+        "prefix": "miSetSelected",
+        "body": [
+            "mini.get('${id}').setSelected( ${row} )"
+        ],
+        "description": "设置当前选中行。"
+    },
+    "miniSelect": {
+        "prefix": "miSelect",
+        "body": [
+            "mini.get('${id}').select( ${row}, ${fireEvent} )"
+        ],
+        "description": "选中行，fireEvent: Boolean。是否激发选择事件。"
+    },
+    "miniDeselect": {
+        "prefix": "miDeselect",
+        "body": [
+            "mini.get('${id}').deselect( ${row}, ${fireEvent} )"
+        ],
+        "description": "取消选中行，fireEvent: Boolean。是否激发选择事件。"
+    },
+    "miniSelectAll": {
+        "prefix": "miSelectAll",
+        "body": [
+            "mini.get('${id}').selectAll( ${fireEvent} )"
+        ],
+        "description": "选中所有行，fireEvent: Boolean。是否激发选择事件。"
+    },
+    "miniDeselectAll": {
+        "prefix": "miDeselectAll",
+        "body": [
+            "mini.get('${id}').deselectAll( ${fireEvent} )"
+        ],
+        "description": "取消选中所有行，fireEvent: Boolean。是否激发选择事件。"
+    },
+    "miniClearSelect": {
+        "prefix": "miClearSelect ",
+        "body": [
+            "mini.get('${id}').clearSelect( ${fireEvent} )"
+        ],
+        "description": "取消选中所有行，fireEvent: Boolean。是否激发选择事件。"
+    },
+    "miniSelects": {
+        "prefix": "miSelects",
+        "body": [
+            "mini.get('${id}').selects( ${rows}, ${fireEvent} )"
+        ],
+        "description": "选中多行，fireEvent: Boolean。是否激发选择事件。"
+    },
+    "miniDeselects": {
+        "prefix": "miDeselects",
+        "body": [
+            "mini.get('${id}').deselects( ${rows}, ${fireEvent} )"
+        ],
+        "description": "取消选中多行，fireEvent: Boolean。是否激发选择事件。"
+    },
+    "miniGetRow": {
+        "prefix": "miGetRow",
+        "body": [
+            "mini.get('${id}').getRow( ${index} )"
+        ],
+        "description": "获取行对象。"
+    },
+    "miniGetColumn": {
+        "prefix": "miGetColumn",
+        "body": [
+            "mini.get('${id}').getColumn( ${indexOrcolumnName} )"
+        ],
+        "description": "获取列对象，indexOrcolumnName：列索引或列名。"
+    },
+    "miniFindRow": {
+        "prefix": "miFindRow",
+        "body": [
+            "mini.get('${id}').findRow( function(row) {  if(row.name == '张三') return true; } )"
+        ],
+        "description": "通过查询函数获取行对象。"
+    },
+    "miniFindRows": {
+        "prefix": "miFindRows",
+        "body": [
+            "mini.get('${id}').findRows( function(row) {  if(row.age > 20) return true; } )"
+        ],
+        "description": "通过查询函数获取行对象数组。"
+    },
+    "miniGetNode": {
+        "prefix": "miGetNode",
+        "body": [
+            "mini.get('${id}').getNode( ${value } )"
+        ],
+        "description": "根据值获取节点对象。"
+    },
+    "miniSetNodeText": {
+        "prefix": "miSetNodeText",
+        "body": [
+            "mini.get('${id}').setNodeText( ${node}, ${String} )"
+        ],
+        "description": "设置节点文本。"
+    },
+    "miniFindNodes": {
+        "prefix": "miFindNodes",
+        "body": [
+            "mini.get('${id}').findNodes( function(node) { if(node.name.indexOf('abc') != -1) return true; } )"
+        ],
+        "description": "查找节点数据。"
+    },
+    "miniDisableNode": {
+        "prefix": "miDisableNode",
+        "body": [
+            "mini.get('${id}').disableNode( ${node} )"
+        ],
+        "description": "禁用节点。"
+    },
+    "miniEnableNode": {
+        "prefix": "miEnableNode",
+        "body": [
+            "mini.get('${id}').enableNode( ${node} )"
+        ],
+        "description": "启用节点。"
+    },
+    "miniSelectNode": {
+        "prefix": "miSelectNode",
+        "body": [
+            "mini.get('${id}').selectNode( ${node} )"
+        ],
+        "description": "选中节点。"
+    },
+    "miniGetSelectedNode": {
+        "prefix": "miGetSelectedNode",
+        "body": [
+            "mini.get('${id}').getSelectedNode()"
+        ],
+        "description": "获取选中的节点。"
+    },
+    "miniCheckNode": {
+        "prefix": "miCheckNode",
+        "body": [
+            "mini.get('${id}').checkNode( ${node} )"
+        ],
+        "description": "Check多选节点。"
+    },
+    "miniUncheckNode": {
+        "prefix": "miUncheckNode",
+        "body": [
+            "mini.get('${id}').uncheckNode( ${node} )"
+        ],
+        "description": "取消Check多选节点。"
+    },
+    "miniCheckNodes": {
+        "prefix": "miCheckNodes",
+        "body": [
+            "mini.get('${id}').checkNodes( ${nodes} )"
+        ],
+        "description": "Check多选多个节点。"
+    },
+    "miniUncheckNodes": {
+        "prefix": "miUncheckNodes",
+        "body": [
+            "mini.get('${id}').uncheckNodes( ${nodes} )"
+        ],
+        "description": "取消Check多选多个节点。"
+    },
+    "miniCheckAllNodes": {
+        "prefix": "miCheckAllNodes",
+        "body": [
+            "mini.get('${id}').checkAllNodes()"
+        ],
+        "description": "Check多选所有节点。"
+    },
+    "miniUncheckAllNodes": {
+        "prefix": "miUncheckAllNodes",
+        "body": [
+            "mini.get('${id}').uncheckAllNodes()"
+        ],
+        "description": "取消Check多选所有节点。"
+    },
+    "miniGetCheckedNodes": {
+        "prefix": "miGetCheckedNodes",
+        "body": [
+            "mini.get('${id}').getCheckedNodes( ${haveParent} )"
+        ],
+        "description": "获取Check选中的多个节点，haveParent: Boolean。是否包含父节点。"
+    },
+    "miniExpandNode": {
+        "prefix": "miExpandNode",
+        "body": [
+            "mini.get('${id}').expandNode( ${node} )"
+        ],
+        "description": "展开节点。"
+    },
+    "miniCollapseNode": {
+        "prefix": "miCollapseNode",
+        "body": [
+            "mini.get('${id}').collapseNode( ${node} )"
+        ],
+        "description": "收缩节点。"
+    },
+    "miniExpandAll": {
+        "prefix": "miExpandAll",
+        "body": [
+            "mini.get('${id}').expandAll()"
+        ],
+        "description": "展开所有节点。"
+    },
+    "miniCollapseAll": {
+        "prefix": "miCollapseAll",
+        "body": [
+            "mini.get('${id}').collapseAll()"
+        ],
+        "description": "收缩所有节点。"
+    }
+}
