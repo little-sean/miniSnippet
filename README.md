@@ -4,7 +4,7 @@ Over 100 MiniUI Code Snippets for Javascript code.
 
 Just type the letters 'mi' to get a list of all avaliable MiniUI Code Snippets
 
-![Image of Snippets](https://github.com/little-sean/miniSnippet/blob/master/miniplugin/images/demo.pngg)
+![Image of Snippets](https://github.com/little-sean/miniSnippet/blob/master/miniplugin/images/demo.png)
 
 # Snippets
 
