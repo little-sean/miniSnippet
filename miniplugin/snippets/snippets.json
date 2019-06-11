@@ -169,7 +169,7 @@
         "body": [
             "mini.get('${id}').beginEditCell(${row},${column})"
         ],
-        "description": "对当前选中单元格启动编辑，row为单元格所在的行对象。\n column为单元格所在列对象，可以是一个完整的列对象，也可以是列的name值，也可以是列的索引。
+        "description": "对当前选中单元格启动编辑，row为单元格所在的行对象。\n column为单元格所在列对象，可以是一个完整的列对象，也可以是列的name值，也可以是列的索引。"
     },
     "miniCancelEdit": {
         "prefix": "miCancelEdit",
@@ -225,7 +225,7 @@
         "body": [
             "mini.get('${id}').getCellEditor( ${column}, ${row} )"
         ],
-        "description": "获取指定列和行的编辑器控件对象，row为单元格所在的行对象。\n column为单元格所在列对象，可以是一个完整的列对象，也可以是列的name值，也可以是列的索引。
+        "description": "获取指定列和行的编辑器控件对象，row为单元格所在的行对象。\n column为单元格所在列对象，可以是一个完整的列对象，也可以是列的name值，也可以是列的索引。"
     },
     "miniGetEditorOwnerRow": {
         "prefix": "miGetEditorOwnerRow",
