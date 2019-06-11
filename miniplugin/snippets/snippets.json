@@ -132,9 +132,9 @@
     "miniFrozenColumns": {
         "prefix": "miFrozenColumns",
         "body": [
-            "mini.get('${id}').frozenColumns(${startColumnIndex}, ${finishColumnIndex})"
+            "mini.get('${id}').frozenColumns(${1: 0}, ${finishColumnIndex})"
         ],
-        "description": "锁定列，startColumnIndex：开始列，finishColumnIndex：结束列"
+        "description": "锁定列，startColumnIndex：开始列，一般固定为0，finishColumnIndex：结束列"
     },
     "miniUnFrozenColumns": {
         "prefix": "miUnFrozenColumns",
@@ -167,9 +167,9 @@
     "miniBeginEditCell": {
         "prefix": "miBeginEditCell",
         "body": [
-            "mini.get('${id}').beginEditCell()"
+            "mini.get('${id}').beginEditCell(${row},${column})"
         ],
-        "description": "对当前选中单元格启动编辑。"
+        "description": "对当前选中单元格启动编辑，row为单元格所在的行对象。\n column为单元格所在列对象，可以是一个完整的列对象，也可以是列的name值，也可以是列的索引。
     },
     "miniCancelEdit": {
         "prefix": "miCancelEdit",
@@ -183,7 +183,7 @@
         "body": [
             "mini.get('${id}').commitEditRow(${row})"
         ],
-        "description": "提交指定行编辑。"
+        "description": "提交指定行编辑,row为行对象，可以是一个完整的行对象，也可以是行的索引。"
     },
     "miniCommitEdit": {
         "prefix": "miCommitEdit",
@@ -197,14 +197,14 @@
         "body": [
             "mini.get('${id}').beginEditRow(${row})"
         ],
-        "description": "启动行编辑。"
+        "description": "启动行编辑,row为行对象，可以是一个完整的行对象，也可以是行的索引。"
     },
     "miniCancelEditRow": {
         "prefix": "miCancelEditRow",
         "body": [
             "mini.get('${id}').cancelEditRow(${row})"
         ],
-        "description": "取消指定行编辑。"
+        "description": "取消指定行编辑,row为行对象，可以是一个完整的行对象，也可以是行的索引。"
     },
     "miniIsEditing": {
         "prefix": "miIsEditing",
@@ -218,14 +218,14 @@
         "body": [
             "mini.get('${id}').isEditingRow(${row})"
         ],
-        "description": "指定行是否处于编辑状态。"
+        "description": "指定行是否处于编辑状态,row为行对象，可以是一个完整的行对象，也可以是行的索引。"
     },
     "miniGetCellEditor": {
         "prefix": "miGetCellEditor",
         "body": [
             "mini.get('${id}').getCellEditor( ${column}, ${row} )"
         ],
-        "description": "获取指定列和行的编辑器控件对象。"
+        "description": "获取指定列和行的编辑器控件对象，row为单元格所在的行对象。\n column为单元格所在列对象，可以是一个完整的列对象，也可以是列的name值，也可以是列的索引。
     },
     "miniGetEditorOwnerRow": {
         "prefix": "miGetEditorOwnerRow",
@@ -237,9 +237,9 @@
     "miniUpdateRow": {
         "prefix": "miUpdateRow",
         "body": [
-            "mini.get('${id}').updateRow( ${row}, ${rowData} )"
+            "mini.get('${id}').updateRow( ${row}, ${key}, ${value} )"
         ],
-        "description": "更新行。"
+        "description": "更新行，row：要更新的行对象。\n key：当key为一个对象时，可实现一次更新多个字段，不需要第三个参数。当key为字符串时，表示要更新的字段名。\n value：新的值。"
     },
     "miniRemoveRow": {
         "prefix": "miRemoveRow",
@@ -265,7 +265,7 @@
     "miniAddRow": {
         "prefix": "miAddRow",
         "body": [
-            "mini.get('${id}').addRows( ${row}, ${index} )"
+            "mini.get('${id}').addRow( ${row}, ${index} )"
         ],
         "description": "增加行。"
     },
