@@ -29,6 +29,12 @@ miGetData | 控件取值
 miLoad | 加载数据，successFn：成功回调函数，failFn：失败回调函数
 ... | ...
 
+# Use
+
+打开VScode, 在扩展中搜索miniSnippet，点击install 
+
+![Image of Snippets](https://raw.githubusercontent.com/little-sean/miniSnippet/master/miniplugin/images/use.png)
+
 # Source
 
 [Github](https://github.com/little-sean/miniSnippet)
