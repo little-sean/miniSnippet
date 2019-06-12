@@ -398,21 +398,21 @@
     "miniGetCellEl": {
         "prefix": "miGetCellEl",
         "body": [
-            "mini.get('${id}').getCellEl( ${row}, ${column } )"
+            "mini.get('${id}').getCellEl( ${row}, ${column} )"
         ],
         "description": "获取单元格DOM对象，row: 行对象或者行索引。"
     },
     "miniAddRowCls": {
         "prefix": "miAddRowCls",
         "body": [
-            "mini.get('${id}').addRowCls( ${row}, ${clsname } )"
+            "mini.get('${id}').addRowCls( ${row}, '${clsname}' )"
         ],
         "description": "增加行样式, row: 行对象或者行索引, clsname：样式名"
     },
     "miniRemoveRowCls": {
         "prefix": "miRemoveRowCls",
         "body": [
-            "mini.get('${id}').removeRowCls( ${row}, ${clsname } )"
+            "mini.get('${id}').removeRowCls( ${row}, '${clsname}' )"
         ],
         "description": "删除行样式, row: 行对象或者行索引, clsname：样式名"
     },
